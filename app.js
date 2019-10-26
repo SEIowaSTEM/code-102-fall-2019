@@ -1,3 +1,5 @@
+
+
 function setup() {
     createCanvas(640, 480);
 }
@@ -16,9 +18,7 @@ function draw() {
 }
 
 
-
 function day1AM() {      // declares function you make
-    console.log("Hello World");
     var fullName = "Kristine Bullock";
     var age = 33;
     var weight = 130;
@@ -27,6 +27,8 @@ function day1AM() {      // declares function you make
     var inches = heightInInches % 12; //% sign instead of divide sign gives you back the remainder (also known as modules)
     var address = "3971 Roberts Rdg NE";
     var middleName; //don't need to define a variable
+   
+    console.log("Hello World");
     console.log(address); //check to see that the console prints the correct info
     console.log(typeof (address)); //tells you the type of this variable
     console.log(typeof (age)); //tells you the type of this variable; in JS, age and weight are # event though one is a decimal
@@ -54,8 +56,32 @@ function f2c(tempF){
     return((tempF -32)*(5/9)); //returns the answer to f2c
 }
 
-day1AM(); //calls function you've previously made
-print ("Hello World"); //calls function print defined below
-var convertedTemp = f2c(212); //calls f2c function which then prints the conversion
-print (convertedTemp);
+function bmiConverter(weight,heightInInches){
+    return((weight/heightInInches)*703);
+}
+
+function canIGoToTheCasino(age, location){
+    return age >= 21  && location == "IA" || age >= 18 && location == "MN"; //combine two conditions together and both sides have to be two; || means or statement
+}
+
+
+
+function day1PM(){
+    var convertedTemp = f2c(212); //calls f2c function which then prints the conversion
+    print (convertedTemp);
+    var age = 19;
+    var bmiConverterOutput = bmiConverter(130, 69);
+    print (bmiConverterOutput);
+    print (canIGoToTheCasino (age, "IA"));
+    print (canIGoToTheCasino (19, "MN"));
+    
+}
+
+
+ day1AM();
+ day1PM();
+
+
+
+
 
