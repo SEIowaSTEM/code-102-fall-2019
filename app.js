@@ -1,6 +1,5 @@
 function setup() {
     createCanvas(640, 480);
-
 }
 
 function draw() {
@@ -14,8 +13,9 @@ function draw() {
     stroke(0, 0, 0);
     strokeWeight(3);
     line(0, 40, 640, 40);
-
 }
+
+
 
 function day1AM() {      // declares function you make
     console.log("Hello World");
@@ -23,6 +23,8 @@ function day1AM() {      // declares function you make
     var age = 33;
     var weight = 130;
     var heightInInches = 69;
+    var feet = Math.floor(heightInInches / 12); //Math library can create random #'s, sin, cosine, tan, math.floor (rounds down), math.ceil (rounds up)
+    var inches = heightInInches % 12; //% sign instead of divide sign gives you back the remainder (also known as modules)
     var address = "3971 Roberts Rdg NE";
     var middleName; //don't need to define a variable
     console.log(address); //check to see that the console prints the correct info
@@ -39,7 +41,21 @@ function day1AM() {      // declares function you make
 
     console.log(fullName + " is " + age + " years old."); //the + sign means concatenate or connect together
     console.log("Do you like pizza? " + likesPizza);
+    console.log(fullName + " is " + feet + " feet " + inches + " inches tall.") //this helps you confirm your formulas worked  
+}
 
+function print(input){
+    console.log(input);
+}
+
+//Converts Fahrenheit to Celsius
+//Input: temperature in Fahrenheit 
+function f2c(tempF){
+    return((tempF -32)*(5/9)); //returns the answer to f2c
 }
 
 day1AM(); //calls function you've previously made
+print ("Hello World"); //calls function print defined below
+var convertedTemp = f2c(212); //calls f2c function which then prints the conversion
+print (convertedTemp);
+
