@@ -38,7 +38,7 @@ function day1AM() {      // declares function you make
     console.log(age); //confirms that adding to the age worked
 
     console.log(fullName + " is " + age + " years old."); //the + sign means concatenate or connect together
-
+    console.log("Do you like pizza? " + likesPizza);
 
 }
 
