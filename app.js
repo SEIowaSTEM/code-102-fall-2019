@@ -31,6 +31,14 @@ function day1AM() {      // declares function you make
     var likesPizza = true; //Boolean # that could be true or false
     var hasTatoos = false; //true or false must be lowercase
     console.log(typeof (likesPizza));
+    console.log(age); //prints age in console before adding the 1
+    age = age + 1;
+    heightInInches -= 1; //operators -=, +=, *= add or subtract or multiple whatever # follows
+    console.log(heightInInches);
+    console.log(age); //confirms that adding to the age worked
+
+    console.log(fullName + " is " + age + " years old."); //the + sign means concatenate or connect together
+
 
 }
 
