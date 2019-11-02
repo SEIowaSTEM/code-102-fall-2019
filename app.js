@@ -123,19 +123,47 @@ function day2AM() {
     }
 
     //Function to ask the user for numbers and then find the average of the numbers
-    var sum = 0;
-    var count2 = 0;
-    while (true) {
-        var input = parseInt(prompt('Enter a number, please. Type 0 to end. '));  //parseInt is expecting an integar from user; prompts creates dialog box
-        if (input === 0) {    //three equal signs makes sure the data type is a number
-            break;
-        }
-        else {
-            sum += input; //Adds the user input number to the sum
-            count2++; //increases the count each time a number is entered
-        }
+    // var sum = 0;
+    // var count2 = 0;
+    // while (true) {
+    //     var input = parseInt(prompt('Enter a number, please. Type 0 to end. '));  //parseInt is expecting an integar from user; prompts creates dialog box
+    //     if (input === 0) {    //three equal signs makes sure the data type is a number
+    //         break;
+    //     }
+    //     else {
+    //         sum += input; //Adds the user input number to the sum
+    //         count2++; //increases the count each time a number is entered
+    //     }
+    // } 
+    // console.log('The average of your numbers is ' + sum / count2);
+
+    for(var count = 0; count <= 100; count+=5) {
+        console.log(count);
+      } 
+      
+      var months =['January', 'February', 'March', 'April', 'May'];
+      print(months[0]); //0 is the index which gives the position in the array
+      print(months[1]);
+
+      for(var i = 0; i < 5; i++){   //i stands for iteration; there are 5 elements but since it starts w/0, count up to 4
+          print(months[i]); //prints the information at the applicable position for i
+      }
+
+      for(var i = 0; i < months.length; i++){   //months.length takes the variable 'months' and uses the built in 'length' function to input the length of the array 'months'
+        print(months[i]); //prints the information at the applicable position for i
     }
-    console.log('The average of your numbers is ' + sum / count2);
+
+    var states = ['Alabama', 'Alaska', 'Arizona'];
+    for(var i = 0; i < states.length; i++){
+        print(states[i]);
+    }
+
+    var peanutButter = ['Arkansas', 'California', 'Colorado'];
+    peanutButter.forEach(function(jelly) {  //forEach is a method that executes a function on each element of the array
+        print(jelly);
+    });
+
+    
 
 }
 day2AM();
