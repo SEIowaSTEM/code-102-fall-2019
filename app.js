@@ -166,7 +166,76 @@ function day2AM() {
     
 
 }
-day2AM();
+//day2AM();
+
+function day2PM(){
+    var kristine = {            //object exclusive to Kristine's details
+        firstName: "Kristine",  //comma not semi-colon
+        middleName: "Marie",
+        lastName: "Bullock",
+        dob: [10, 23, 1986],  //create array for birthday mm/dd/yyyy
+        heightInches: 69,
+        fullName: function() {    //function stored as a key is known as a method
+            return this.firstName + ' ' + this.middleName + ' ' + this.lastName;  //the word 'this' refers to the property of the current object and tries to find firstName
+          },
+          age: function() {
+            var today = new Date(); //built in JS object that gets today's date
+            var year = today.getFullYear(); //gets year for today's date
+            
+            // getMonth will result in 0 for January, 1 for February, etc.    
+            var month = today.getMonth() +1; //list of months starts at 0 in the array so you have to add 1 to get 1-12
+            var day = today.getDate();
+            
+            // The birth year is at index position 2 of the DOB array
+            var myAge = year - this.dob[2];
+            
+            if(month < this.dob[0] || month === this.dob[0] && day < this.dob[1]) {  //dob[0] pulls the month position from my dob array
+              // Subtract one from the age if you haven't had your birthday this year.
+              myAge--;
+            }
+            return(myAge);
+          }
+
+    }; 
+
+    var marc = {
+        firstName: "Marc",  //object exclusive to Marc's details
+        middleName: "Leo",
+        lastName: "Hauschildt",
+        dob: [2, 6, 1981],  //create array for birthday mm/dd/yyyy rather than a static number that should change
+        heightInches: 75,
+        fullName: function() {
+           return this.firstName + ' ' + this.middleName + ' ' + this.lastName;
+         },
+         age: function() {
+            var today = new Date(); //built in JS object that gets today's date
+            var year = today.getFullYear(); //gets year for today's date
+            
+            // getMonth will result in 0 for January, 1 for February, etc.    
+            var month = today.getMonth() +1; //list of months starts at 0 in the array so you have to add 1 to get 1-12
+            var day = today.getDate();
+            
+            // The birth year is at index position 2 of the DOB array
+            var myAge = year - this.dob[2];
+            
+            if(month < this.dob[0] || month === this.dob[0] && day < this.dob[1]) {  //dob[0] pulls the month position from my dob array
+              // Subtract one from the age if you haven't had your birthday this year.
+              myAge--;
+            }
+            return(myAge);
+          },
+    }; 
+
+    print (kristine.firstName + " " + kristine.middleName + " " + kristine.lastName );
+    print (marc.firstName + " " + marc.middleName + " " + marc.lastName );
+    print (kristine.fullName()); //need parenthesis after fullName since it is a function
+    print (marc.fullName());
+    print (kristine.age());
+    print (marc.age());
+
+}
+
+day2PM();
 
 
 
