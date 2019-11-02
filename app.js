@@ -1,7 +1,7 @@
 
 
-day1AM();
-day1PM();
+//day1AM();
+//day1PM();
 
 function setup() {
     createCanvas(640, 480);
@@ -112,6 +112,33 @@ function whatShouldIWear(temp) {
 }
 
 
+function day2AM() {
+    console.log(1); //prints number 1 to console
+    print(2); //calls print function to print 2 to console
+    print(3);
+    var count = 1;
+    while (count <= 10) {
+        print(count); //calls print function to print count to console
+        count++;
+    }
+
+    //Function to ask the user for numbers and then find the average of the numbers
+    var sum = 0;
+    var count2 = 0;
+    while (true) {
+        var input = parseInt(prompt('Enter a number, please. Type 0 to end. '));  //parseInt is expecting an integar from user; prompts creates dialog box
+        if (input === 0) {    //three equal signs makes sure the data type is a number
+            break;
+        }
+        else {
+            sum += input; //Adds the user input number to the sum
+            count2++; //increases the count each time a number is entered
+        }
+    }
+    console.log('The average of your numbers is ' + sum / count2);
+
+}
+day2AM();
 
 
 
